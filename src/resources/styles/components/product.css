@@ -1,0 +1,22 @@
+.product {
+    width: 8rem;
+    height: fit-content;
+    border: 1px solid #A0A0A0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.product:hover {
+    opacity: .5;
+}
+
+.product:active {
+    opacity: .2;
+}
+
+.product img {
+    width: 8rem;
+}
+

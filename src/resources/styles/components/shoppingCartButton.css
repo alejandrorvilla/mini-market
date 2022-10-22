@@ -1,0 +1,21 @@
+.shopping-cart {
+    background-color: #800080;
+    border: 1px solid #800080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    width: 3rem;
+    color: white;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.shopping-cart:hover {
+    background-color: #a321a3;
+}
+
+.shopping-cart.active, .shopping-cart:active {
+    background-color: #fdbafd;
+    color: #800080;
+}

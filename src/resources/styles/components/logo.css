@@ -1,0 +1,11 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+    font-size: 2.5rem;
+}

@@ -1,0 +1,11 @@
+body {
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+}
+
+p {
+  color: #A0A0A0;
+}
