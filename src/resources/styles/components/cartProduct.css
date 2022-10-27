@@ -1,0 +1,22 @@
+.cart-product {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.cart-product {
+  width: 100%;
+  height: 5rem;
+}
+
+.cart-product img {
+  margin-left: 2rem;
+  width: auto;
+  height: 5rem;
+}
+
+.cart-product .counter {
+  position: initial;
+  width: 3rem;
+  height: 3rem;
+}

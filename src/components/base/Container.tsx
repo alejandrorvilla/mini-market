@@ -1,19 +1,20 @@
 import React from "react";
-import "../resources/styles/components/container.css";
+import "../../resources/styles/components/container.css";
 
-function Container(props: Props) {
-  const { children, title } = props;
+function Container(props: IProps) {
+  const { children, title, className } = props;
   return (
-    <section className="container">
+    <section className={`container ${className ? className : ""}`}>
       <div className="title">{title && <h2>{title}</h2>}</div>
       <div className="body">{children}</div>
     </section>
   );
 }
 
-interface Props {
+interface IProps {
   children: JSX.Element | JSX.Element[];
   title?: string;
+  className?: string;
 }
 
 export default Container;

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
-import "../resources/styles/components/logo.css";
+import "../../resources/styles/components/logo.css";
 
 function Logo() {
   return (

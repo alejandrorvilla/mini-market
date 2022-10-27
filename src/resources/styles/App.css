@@ -7,5 +7,47 @@ body {
 }
 
 p {
-  color: #A0A0A0;
+  color: #a0a0a0;
+}
+
+.right-container .btn-back {
+  display: none;
+  background-color: purple;
+  border-radius: 0.2rem;
+  color: white;
+  border: none;
+  width: 4rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right-container .btn-back:active {
+  background-color: #fdbafd;
+  color: #800080;
+}
+
+.left-container {
+  width: 60%;
+}
+
+.right-container {
+  width: 40%;
+}
+
+@media only screen and (max-width: 699px) {
+  .left-container:not(.active),
+  .right-container:not(.active) {
+    display: none;
+  }
+
+  .right-container.active,
+  .left-container.active {
+    width: 100%;
+  }
+  .right-container .btn-back {
+    display: flex;
+  }
 }

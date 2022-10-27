@@ -1,22 +1,27 @@
 .product {
-    width: 8rem;
-    height: fit-content;
-    border: 1px solid #A0A0A0;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    cursor: pointer;
-    display: inline-block;
+  width: 8rem;
+  height: fit-content;
+  border: 1px solid #a0a0a0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.product.product-selected {
+  border: 1px solid purple;
+  box-shadow: rgb(233, 48, 233) 0px 5px 15px;
 }
 
 .product:hover {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .product:active {
-    opacity: .2;
+  opacity: 0.2;
 }
 
 .product img {
-    width: 8rem;
+  width: 8rem;
 }
-
