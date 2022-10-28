@@ -1,9 +1,12 @@
-import { applyMiddleware, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import cartReducer, { IState as ICartState } from "../reducer/cart.reducer";
 import productReducer, {
   IState as IProductState,
 } from "../reducer/product.reducer";
+import transactionReducer, {
+  IState as ITransactionState,
+} from "../reducer/transaction.reducer";
 import rootSaga from "../sagas";
 
 export const store = (() => {
@@ -12,6 +15,7 @@ export const store = (() => {
     reducer: {
       product: productReducer,
       cart: cartReducer,
+      transaction: transactionReducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(sagaMiddleware),
@@ -25,4 +29,5 @@ export const store = (() => {
 export interface IReducer {
   product: IProductState;
   cart: ICartState;
+  transaction: ITransactionState;
 }

@@ -11,11 +11,11 @@ function WidgetPayment(props: IProps) {
         src: "https://checkout.wompi.co/widget.js",
         class: "current",
         "data-render": "button",
-        "data-redirect-url": "http://localhost:3000/#check",
+        "data-redirect-url": window.location.href,
         "data-public-key": "pub_test_Q5yDA9xoKdePzhSGeVe9HAez7HgGORGf",
         "data-currency": "COP",
         "data-amount-in-cents": `${total}00`,
-        "data-reference": `T3STPRUEBA${Math.floor(Math.random() * 100000)}`,
+        "data-reference": `TESTPRUEBA${Math.floor(Math.random() * 100000)}`,
       };
       Object.keys(attributes).forEach((key) => {
         script.setAttribute(key, attributes[key]);

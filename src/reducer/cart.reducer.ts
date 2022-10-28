@@ -58,9 +58,13 @@ const cartSlice = createSlice({
     setActive: (state: IState) => {
       state.active = !state.active;
     },
+    clearCart: (state: IState) => {
+      setLocalStorage(KEY, []);
+      state.cart = [];
+    },
   },
 });
 
-export const { increaseItem, decreaseItem, setActive } = cartSlice.actions;
+export const { increaseItem, decreaseItem, setActive, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

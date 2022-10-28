@@ -16,6 +16,9 @@ import Utilities from "../utilities/Utilities";
 import CartList from "../components/cart/CartList";
 import { BiArrowBack } from "react-icons/bi";
 import "../resources/styles/App.css";
+import { clearMessage, loadTransaction } from "../reducer/transaction.reducer";
+import { IMessage } from "../model/transaction";
+import Message from "../components/base/Modal";
 
 function App(props: IProps & IPropsEvents) {
   const {
@@ -23,11 +26,14 @@ function App(props: IProps & IPropsEvents) {
     selectedProductId,
     activeCartView,
     cart,
+    message,
     loadProducts,
     increaseItem,
     decreaseItem,
     setProduct,
     changeActiveCart,
+    loadTransaction,
+    clearMessage,
   } = props;
   const productsAdapted = createAdapterProduct(products, cart);
   const cartAdapted = createAdapterCart(products, cart);
@@ -39,6 +45,11 @@ function App(props: IProps & IPropsEvents) {
     ? "Product"
     : "";
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const transactionId = params.get("id");
+    if (transactionId) {
+      loadTransaction(transactionId);
+    }
     loadProducts();
   }, []);
 
@@ -83,6 +94,7 @@ function App(props: IProps & IPropsEvents) {
           )}
         </Container>
       </div>
+      {message && <Message message={message} onHide={() => {clearMessage()}} />}
     </React.Fragment>
   );
 }
@@ -92,6 +104,7 @@ interface IProps {
   selectedProductId?: number;
   cart: Array<ICartItem>;
   activeCartView: boolean;
+  message?: IMessage;
 }
 
 interface IPropsEvents {
@@ -100,6 +113,8 @@ interface IPropsEvents {
   decreaseItem: (productId: number) => void;
   setProduct: (productId: number | null) => void;
   changeActiveCart: () => void;
+  loadTransaction: (transactionId: string) => void;
+  clearMessage: () => void;
 }
 
 const mapStateToProps = (state: IReducer) => ({
@@ -107,6 +122,7 @@ const mapStateToProps = (state: IReducer) => ({
   selectedProductId: state.product.selectedProductId,
   cart: state.cart.cart,
   activeCartView: state.cart.active,
+  message: state.transaction.message,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): IPropsEvents =>
@@ -117,6 +133,8 @@ const mapDispatchToProps = (dispatch: Dispatch): IPropsEvents =>
       decreaseItem: decreaseItem,
       setProduct: selectProduct,
       changeActiveCart: setActive,
+      loadTransaction: loadTransaction,
+      clearMessage: clearMessage,
     },
     dispatch
   );

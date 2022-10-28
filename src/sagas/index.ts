@@ -1,9 +1,10 @@
-
-import SagaMiddleware from "redux-saga"
 import { takeLatest } from "redux-saga/effects";
 import { loadProducts } from "../reducer/product.reducer";
-import tryProductsList from "./products/productSagas";
+import { loadTransaction } from "../reducer/transaction.reducer";
+import tryProductsList from "./product/productSagas";
+import tryTransaction from "./transaction/transactionSagas";
 
 export default function* rootSaga() {
   yield takeLatest(loadProducts.type, tryProductsList);
+  yield takeLatest(loadTransaction.type, tryTransaction);
 }
