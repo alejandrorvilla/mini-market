@@ -1,30 +1,27 @@
 import { IProduct } from "../model/product";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getProducts as getProductsService } from "../services/product.services";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface IState {
+  loading: boolean;
   products: Array<IProduct>;
   selectedProductId?: number;
 }
 
 const initialState: IState = {
+  loading: false,
   products: [],
 };
-
-export const getProducts = createAsyncThunk(
-  "product/getProducts",
-  async (_, { dispatch }) => {
-    const products = await getProductsService();
-    dispatch(setProducts(products));
-  }
-);
 
 const productsSlice = createSlice({
   name: "product",
   initialState,
   reducers: {
-    setProducts: (state, { payload }) => {
-      state.products = payload;
+    loadProducts: (state) => {
+      state.loading = true;
+    },
+    setProducts: (state, payload) => {
+      state.loading = false;
+      state.products = payload.payload;
     },
     selectProduct: (state, { payload }) => {
       state.selectedProductId = payload;
@@ -32,6 +29,7 @@ const productsSlice = createSlice({
   },
 });
 
-export const { setProducts, selectProduct } = productsSlice.actions;
+export const { setProducts, selectProduct, loadProducts } =
+  productsSlice.actions;
 
 export default productsSlice.reducer;

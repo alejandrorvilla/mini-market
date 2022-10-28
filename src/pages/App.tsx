@@ -4,7 +4,7 @@ import Container from "../components/base/Container";
 import ProductDetail from "../components/detail/ProductDetail";
 import Header from "../components/base/Header";
 import ProductList from "../components/stock/ProductList";
-import { getProducts, selectProduct } from "../reducer/product.reducer";
+import { loadProducts, selectProduct } from "../reducer/product.reducer";
 import { bindActionCreators, Dispatch } from "redux";
 import { IProduct } from "../model/product";
 import { IReducer } from "../store";
@@ -112,7 +112,7 @@ const mapStateToProps = (state: IReducer) => ({
 const mapDispatchToProps = (dispatch: Dispatch): IPropsEvents =>
   bindActionCreators(
     {
-      loadProducts: getProducts,
+      loadProducts: loadProducts,
       increaseItem: increaseItem,
       decreaseItem: decreaseItem,
       setProduct: selectProduct,
