@@ -10,8 +10,8 @@
 }
 
 .product.product-selected {
-  border: 1px solidvar(--dark-purple);
-  box-shadow: #e930e9 0px 5px 15px;
+  border: 1px solid var(--dark-purple);
+  box-shadow: var(--normal-purple) 0px 5px 15px;
 }
 
 .product:hover {

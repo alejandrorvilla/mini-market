@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: var(--font-size-m);
   margin-top: 1rem;
 }
 
@@ -13,6 +13,6 @@
 }
 
 .totalizer .price {
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   color:var(--dark-purple);
 }

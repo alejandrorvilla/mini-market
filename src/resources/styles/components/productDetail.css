@@ -26,14 +26,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .detail .amount button {
   width: 2rem;
   height: 2rem;
-  font-size: 1.2rem;
-  margin-right: 0.1rem;
+  font-size: var(--font-size-m);
+  margin-right: .1rem;
   cursor: pointer;
 }
 
@@ -53,8 +53,8 @@
 
 .detail .amount button.btn-increase[disabled]:hover,
 .detail .amount button.btn-increase[disabled]:active {
-  background-color:var(--dark-purple);
-  color:var(--light-dark);
+  background-color: var(--dark-purple);
+  color: var(--light-dark);
 }
 
 .detail .amount button.btn-decrease[disabled]:hover,
@@ -68,11 +68,11 @@
 }
 
 .detail .amount .info > span {
-  margin-right: 0.5rem;
+  margin-right: .5rem;
 }
 
 .detail .amount .info > span.price {
-  color:var(--dark-purple);
+  color: var(--dark-purple);
   font-weight: bolder;
 }
 
@@ -94,8 +94,8 @@
 }
 
 .detail .amount button.btn-increase {
-  background-color:var(--dark-purple);
-  color:var(--light-dark);
+  background-color: var(--dark-purple);
+  color: var(--light-dark);
   border: none;
 }
 

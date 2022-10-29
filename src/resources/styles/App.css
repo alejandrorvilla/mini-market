@@ -9,26 +9,26 @@ body {
 }
 
 p {
-  color: #a0a0a0;
+  color: var(--normal-gray);
 }
 
 .right-container .btn-back {
   display: none;
-  background-color: purple;
-  border-radius: 0.2rem;
+  background-color: var(--dark-purple);
+  border-radius: .2rem;
   color: white;
   border: none;
   width: 4rem;
   height: 2rem;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  font-size: var(--font-size-s);
+  margin-top: .5rem;
   justify-content: space-around;
   align-items: center;
 }
 
 .right-container .btn-back:active {
-  background-color: #fdbafd;
-  color: #800080;
+  background-color: var(--light-purple);
+  color: var(--dark-purple);
 }
 
 .left-container {

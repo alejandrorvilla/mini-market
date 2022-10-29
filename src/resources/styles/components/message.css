@@ -1,5 +1,5 @@
 .message {
-  background: rgba(32, 35, 41, 0.8);
+  background: var(--color-mask);
   position: fixed;
   top: -10px;
   left: -10px;
@@ -13,8 +13,8 @@
 .message .content {
   height: 12rem;
   width: 80%;
-  background-color:var(--light-dark);
-  border: 2px solidvar(--dark-purple);
+  background-color: var(--light-dark);
+  border: 2px solid var(--dark-purple);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
 }
 
 .message .content p {
-  color: black;
+  color: var(--normal-black);
   text-align: center;
 }
 
@@ -33,21 +33,21 @@
 }
 
 .message .content.error h2 {
-  color:var(--color-error);
+  color: var(--color-error);
 }
 
 .message .content.success h2 {
-  color:var(--color-success);
+  color: var(--color-success);
 }
 
 .message .content button {
   width: 5rem;
   height: 1.5rem;
-  font-size: .9rem;
+  font-size: var(--font-size-s);
   margin-right: 0.1rem;
   cursor: pointer;
-  background-color:var(--dark-purple);
-  color:var(--light-dark);
+  background-color: var(--dark-purple);
+  color: var(--light-dark);
   border: none;
 }
 

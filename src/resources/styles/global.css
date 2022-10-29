@@ -11,6 +11,15 @@
     --normal-white: #EBE8E8;
     --light-dark: #FFFFFF;
 
+    --normal-black: #000000;
+
     --color-success: #054D05;
     --color-error: #980404;
+    --color-mask: #202329CC;
+
+    --font-size-s: .9rem;
+    --font-size-m: 1.2rem;
+
+    --icon-xxl: 2.5rem;
+
 }
