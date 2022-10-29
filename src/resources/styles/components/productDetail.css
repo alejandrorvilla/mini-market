@@ -26,49 +26,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-.detail .amount button {
+.detail .amount .btn-count {
   width: 2rem;
   height: 2rem;
   font-size: var(--font-size-m);
-  margin-right: .1rem;
-  cursor: pointer;
-}
-
-.detail .amount button[disabled] {
-  cursor: default;
-}
-
-.detail .amount button[disabled] {
-  cursor: default;
-  opacity: 0.5;
-}
-
-.detail .amount button[disabled] {
-  cursor: default;
-  opacity: 0.5;
-}
-
-.detail .amount button.btn-increase[disabled]:hover,
-.detail .amount button.btn-increase[disabled]:active {
-  background-color: var(--dark-purple);
-  color: var(--light-dark);
-}
-
-.detail .amount button.btn-decrease[disabled]:hover,
-.detail .amount button.btn-decrease[disabled]:active {
-  background-color: var(--dark-white);
-}
-
-.detail .amount button[disabled] {
-  cursor: default;
-  opacity: 0.5;
 }
 
 .detail .amount .info > span {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .detail .amount .info > span.price {
@@ -78,34 +46,6 @@
 
 .detail .amount .info > span.separator {
   color: var(--dark-gray);
-}
-
-.detail .amount button.btn-decrease {
-  background-color: var(--dark-white);
-  border: none;
-}
-
-.detail .amount button.btn-decrease:hover {
-  background-color: var(--normal-white);
-}
-
-.detail .amount button.btn-decrease:active {
-  background-color: var(--light-gray);
-}
-
-.detail .amount button.btn-increase {
-  background-color: var(--dark-purple);
-  color: var(--light-dark);
-  border: none;
-}
-
-.detail .amount button.btn-increase:hover {
-  background-color: var(--normal-purple);
-}
-
-.detail .amount button.btn-increase:active {
-  background-color: var(--light-purple);
-  color: var(--dark-purple);
 }
 
 .detail .amount .name {

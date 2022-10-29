@@ -4,21 +4,32 @@ import Container from "../components/base/Container";
 import ProductDetail from "../components/product/ProductDetail";
 import Header from "../components/base/Header";
 import ProductList from "../components/product/ProductList";
-import { loadProducts, selectProduct } from "../reducer/product/product.reducer";
+import {
+  loadProducts,
+  selectProduct,
+} from "../reducer/product/product.reducer";
 import { bindActionCreators, Dispatch } from "redux";
 import { IProduct } from "../model/product";
 import { IReducer } from "../store";
 import { ICartItem } from "../model/cart";
-import { decreaseItem, increaseItem, setActive } from "../reducer/cart/cart.reducer";
+import {
+  decreaseItem,
+  increaseItem,
+  setActive,
+} from "../reducer/cart/cart.reducer";
 import { createAdapterProduct } from "../adapters/adapterProduct";
 import { createAdapterCart } from "../adapters/adapterCart";
 import Utilities from "../utilities/Utilities";
 import CartList from "../components/cart/CartList";
 import { BiArrowBack } from "react-icons/bi";
 import "../resources/styles/App.css";
-import { clearMessage, loadTransaction } from "../reducer/transaction/transaction.reducer";
+import {
+  clearMessage,
+  loadTransaction,
+} from "../reducer/transaction/transaction.reducer";
 import { IMessage } from "../model/transaction";
 import Message from "../components/base/Message";
+import Button from "../components/base/Button";
 
 function App(props: IProps & IPropsEvents) {
   const {
@@ -70,9 +81,8 @@ function App(props: IProps & IPropsEvents) {
           title={titleRight}
           className={`right-container ${containerRightActive ? "active" : ""}`}
         >
-          <button
+          <Button
             className="btn-back"
-            type="button"
             onClick={() => {
               setProduct(null);
               activeCartView && changeActiveCart();
@@ -80,7 +90,7 @@ function App(props: IProps & IPropsEvents) {
           >
             <BiArrowBack />
             Back
-          </button>
+          </Button>
           {activeCartView ? (
             <CartList products={cartAdapted} total={total} />
           ) : (

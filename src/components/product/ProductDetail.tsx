@@ -4,6 +4,7 @@ import Empty from "../base/Empty";
 import Counter from "../base/Counter";
 import "../../resources/styles/components/productDetail.css";
 import Utilities from "../../utilities/Utilities";
+import Button from "../base/Button";
 
 function ProductDetail(props: IProps) {
   const { product, onIncrease, onDecrease } = props;
@@ -26,26 +27,25 @@ function ProductDetail(props: IProps) {
               </span>
             </div>
             <div className="count">
-              <button
-                className="btn-decrease"
-                type="button"
+              <Button
+                className="btn-count"
+                mode="gray"
+                disabled={quantity <= 0}
                 onClick={() => {
                   onDecrease(product.id);
                 }}
-                disabled={quantity <= 0}
               >
                 -
-              </button>
-              <button
-                className="btn-increase"
-                type="button"
+              </Button>
+              <Button
+                className="btn-count"
+                disabled={quantity >= product.stock}
                 onClick={() => {
                   onIncrease(product.id);
                 }}
-                disabled={quantity >= product.stock}
               >
                 +
-              </button>
+              </Button>
             </div>
           </div>
           <div className="description">

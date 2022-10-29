@@ -1,0 +1,50 @@
+.btn {
+  width: fit-content;
+  height: fit-content;
+  font-size: var(--font-size-s);
+  margin: 0.1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.purple {
+  background-color: var(--dark-purple);
+  color: var(--light-white);
+}
+
+.btn.purple:hover {
+  background-color: var(--normal-purple);
+}
+
+.btn.purple:active {
+  background-color: var(--light-purple);
+  color: var(--dark-purple);
+}
+
+.btn.gray {
+  background-color: var(--dark-white);
+}
+
+.btn.gray:hover {
+  background-color: var(--normal-white);
+}
+
+.btn.gray:active {
+  background-color: var(--light-gray);
+}
+
+.btn[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn.purple[disabled]:hover,
+.btn.purple[disabled]:active {
+  background-color: var(--dark-purple);
+  color: var(--light-white);
+}
+
+.btn.gray[disabled]:hover,
+.btn.gray[disabled]:active {
+  background-color: var(--dark-white);
+}
