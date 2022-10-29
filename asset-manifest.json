@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mini-market/static/css/main.e88543cd.css",
-    "main.js": "/mini-market/static/js/main.b0478757.js",
+    "main.css": "/mini-market/static/css/main.33fd7268.css",
+    "main.js": "/mini-market/static/js/main.4f0fd6f8.js",
     "index.html": "/mini-market/index.html",
-    "main.e88543cd.css.map": "/mini-market/static/css/main.e88543cd.css.map",
-    "main.b0478757.js.map": "/mini-market/static/js/main.b0478757.js.map"
+    "main.33fd7268.css.map": "/mini-market/static/css/main.33fd7268.css.map",
+    "main.4f0fd6f8.js.map": "/mini-market/static/js/main.4f0fd6f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.e88543cd.css",
-    "static/js/main.b0478757.js"
+    "static/css/main.33fd7268.css",
+    "static/js/main.4f0fd6f8.js"
   ]
 }
