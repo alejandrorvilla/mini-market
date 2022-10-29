@@ -1,7 +1,7 @@
 .cart-product {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid var(--normal-gray);
 }
 
 .cart-product {

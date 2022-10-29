@@ -1,7 +1,7 @@
 .product {
   width: 8rem;
   height: fit-content;
-  border: 1px solid #a0a0a0;
+  border: 1px solid var(--normal-gray);
   margin-top: 1rem;
   margin-right: 1rem;
   cursor: pointer;
@@ -10,8 +10,8 @@
 }
 
 .product.product-selected {
-  border: 1px solid purple;
-  box-shadow: rgb(233, 48, 233) 0px 5px 15px;
+  border: 1px solidvar(--dark-purple);
+  box-shadow: #e930e9 0px 5px 15px;
 }
 
 .product:hover {

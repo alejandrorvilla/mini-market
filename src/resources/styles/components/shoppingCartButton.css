@@ -1,12 +1,12 @@
 .shopping-cart {
-  background-color: #800080;
-  border: 1px solid #800080;
+  background-color: var(--dark-purple);
+  border: 1px solid var(--dark-purple);
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 2rem;
   min-width: 3rem;
-  color: white;
+  color:var(--light-dark);
   cursor: pointer;
 }
 
@@ -23,13 +23,13 @@
 }
 
 .shopping-cart:hover {
-  background-color: #a321a3;
+  background-color: var(--normal-purple);
 }
 
 .shopping-cart .total.active,
 .shopping-cart:active {
-  background-color: #fdbafd;
-  color: #800080;
+  background-color: var(--light-purple);
+  color: var(--dark-purple);
 }
 
 .shopping-cart .close {

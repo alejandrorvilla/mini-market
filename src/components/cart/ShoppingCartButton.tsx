@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
 import Utilities from "../../utilities/Utilities";
 import "../../resources/styles/components/shoppingCartButton.css";
-import { setActive } from "../../reducer/cart.reducer";
+import { setActive } from "../../reducer/cart/cart.reducer";
 import { IReducer } from "../../store";
 
 function ShoppingCartButton(props: IProps & IPropsEvents) {

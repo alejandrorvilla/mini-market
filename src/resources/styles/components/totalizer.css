@@ -1,6 +1,6 @@
 .totalizer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   font-weight: 600;
@@ -9,10 +9,10 @@
 }
 
 .totalizer .label {
-  color: #a0a0a0;
+  color: var(--normal-gray);
 }
 
 .totalizer .price {
   margin-left: 0.5rem;
-  color: purple;
+  color:var(--dark-purple);
 }

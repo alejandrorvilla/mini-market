@@ -1,0 +1,16 @@
+:root {
+    --dark-purple: #800080;
+    --normal-purple: #A321A3;
+    --light-purple: #FDBAFD;
+
+    --dark-gray: #808080;
+    --normal-gray: #A0A0A0;
+    --light-purple: #CFCDCD;
+
+    --dark-white: #E4E0E0;
+    --normal-white: #EBE8E8;
+    --light-dark: #FFFFFF;
+
+    --color-success: #054D05;
+    --color-error: #980404;
+}

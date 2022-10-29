@@ -53,13 +53,13 @@
 
 .detail .amount button.btn-increase[disabled]:hover,
 .detail .amount button.btn-increase[disabled]:active {
-  background-color: purple;
-  color: white;
+  background-color:var(--dark-purple);
+  color:var(--light-dark);
 }
 
 .detail .amount button.btn-decrease[disabled]:hover,
 .detail .amount button.btn-decrease[disabled]:active {
-  background-color: #e4e0e0;
+  background-color: var(--dark-white);
 }
 
 .detail .amount button[disabled] {
@@ -72,40 +72,40 @@
 }
 
 .detail .amount .info > span.price {
-  color: purple;
+  color:var(--dark-purple);
   font-weight: bolder;
 }
 
 .detail .amount .info > span.separator {
-  color: gray;
+  color: var(--dark-gray);
 }
 
 .detail .amount button.btn-decrease {
-  background-color: #e4e0e0;
+  background-color: var(--dark-white);
   border: none;
 }
 
 .detail .amount button.btn-decrease:hover {
-  background-color: #ebe8e8;
+  background-color: var(--normal-white);
 }
 
 .detail .amount button.btn-decrease:active {
-  background-color: #cfcdcd;
+  background-color: var(--light-gray);
 }
 
 .detail .amount button.btn-increase {
-  background-color: purple;
-  color: white;
+  background-color:var(--dark-purple);
+  color:var(--light-dark);
   border: none;
 }
 
 .detail .amount button.btn-increase:hover {
-  background-color: #a321a3;
+  background-color: var(--normal-purple);
 }
 
 .detail .amount button.btn-increase:active {
-  background-color: #fdbafd;
-  color: #800080;
+  background-color: var(--light-purple);
+  color: var(--dark-purple);
 }
 
 .detail .amount .name {
@@ -113,6 +113,6 @@
 }
 
 .detail .description {
-  border-top: 1px solid #a0a0a0;
-  border-bottom: 1px solid #a0a0a0;
+  border-top: 1px solid var(--normal-gray);
+  border-bottom: 1px solid var(--normal-gray);
 }

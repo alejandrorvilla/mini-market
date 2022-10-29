@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import cartReducer, { IState as ICartState } from "../reducer/cart.reducer";
+import cartReducer, { IState as ICartState } from "../reducer/cart/cart.reducer";
 import productReducer, {
   IState as IProductState,
-} from "../reducer/product.reducer";
+} from "../reducer/product/product.reducer";
 import transactionReducer, {
   IState as ITransactionState,
-} from "../reducer/transaction.reducer";
+} from "../reducer/transaction/transaction.reducer";
 import rootSaga from "../sagas";
 
 export const store = (() => {

@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Container from "../components/base/Container";
-import ProductDetail from "../components/detail/ProductDetail";
+import ProductDetail from "../components/product/ProductDetail";
 import Header from "../components/base/Header";
-import ProductList from "../components/stock/ProductList";
-import { loadProducts, selectProduct } from "../reducer/product.reducer";
+import ProductList from "../components/product/ProductList";
+import { loadProducts, selectProduct } from "../reducer/product/product.reducer";
 import { bindActionCreators, Dispatch } from "redux";
 import { IProduct } from "../model/product";
 import { IReducer } from "../store";
 import { ICartItem } from "../model/cart";
-import { decreaseItem, increaseItem, setActive } from "../reducer/cart.reducer";
+import { decreaseItem, increaseItem, setActive } from "../reducer/cart/cart.reducer";
 import { createAdapterProduct } from "../adapters/adapterProduct";
 import { createAdapterCart } from "../adapters/adapterCart";
 import Utilities from "../utilities/Utilities";
 import CartList from "../components/cart/CartList";
 import { BiArrowBack } from "react-icons/bi";
 import "../resources/styles/App.css";
-import { clearMessage, loadTransaction } from "../reducer/transaction.reducer";
+import { clearMessage, loadTransaction } from "../reducer/transaction/transaction.reducer";
 import { IMessage } from "../model/transaction";
-import Message from "../components/base/Modal";
+import Message from "../components/base/Message";
 
 function App(props: IProps & IPropsEvents) {
   const {
@@ -51,7 +51,7 @@ function App(props: IProps & IPropsEvents) {
       loadTransaction(transactionId);
     }
     loadProducts();
-  }, []);
+  }, [loadTransaction, loadProducts]);
 
   return (
     <React.Fragment>
@@ -94,7 +94,14 @@ function App(props: IProps & IPropsEvents) {
           )}
         </Container>
       </div>
-      {message && <Message message={message} onHide={() => {clearMessage()}} />}
+      {message && (
+        <Message
+          message={message}
+          onHide={(type) => {
+            clearMessage(type);
+          }}
+        />
+      )}
     </React.Fragment>
   );
 }
@@ -114,7 +121,7 @@ interface IPropsEvents {
   setProduct: (productId: number | null) => void;
   changeActiveCart: () => void;
   loadTransaction: (transactionId: string) => void;
-  clearMessage: () => void;
+  clearMessage: (messageType: string) => void;
 }
 
 const mapStateToProps = (state: IReducer) => ({

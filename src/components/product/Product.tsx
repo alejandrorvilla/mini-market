@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
 import { IProduct } from "../../model/product";
-import { IReducer } from "../../store/";
-import { setActive } from "../../reducer/cart.reducer";
-import { selectProduct } from "../../reducer/product.reducer";
+import { IReducer } from "../../store";
+import { setActive } from "../../reducer/cart/cart.reducer";
+import { selectProduct } from "../../reducer/product/product.reducer";
 import "../../resources/styles/components/product.css";
 import Counter from "../base/Counter";
 

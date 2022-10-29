@@ -3,7 +3,7 @@ import { ICartProduct } from "../../model/cart";
 import Empty from "../base/Empty";
 import CartProduct from "./CartProduct";
 import Totalizer from "./Totalizer";
-import WidgetPayment from "./WidgetPayment";
+import WidgetPayment from "../transaction/WidgetPayment";
 import Utilities from "../../utilities/Utilities";
 
 function CartList(props: IProps) {
