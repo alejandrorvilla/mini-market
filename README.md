@@ -3,7 +3,8 @@
 Load hardcoded products and allow them to be added to the shopping cart and persist such information in LocalStorage.
 Use a fake payment and consume an API to confirm the status of the transaction.
 
-[Demo](https://market-react07.surge.sh/)
+[Demo](https://market-react07.surge.sh/) - Surge
+[Demo](https://alejandrorvilla.github.io/mini-market/) - GitHub Pages
 
 ## Technologies
 
