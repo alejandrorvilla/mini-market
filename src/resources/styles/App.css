@@ -2,6 +2,12 @@
 
 body {
   padding: 1rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .content {
@@ -16,7 +22,7 @@ p {
   display: none;
   width: 4rem;
   height: 2rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   justify-content: space-around;
   align-items: center;
 }

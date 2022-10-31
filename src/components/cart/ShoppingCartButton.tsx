@@ -11,14 +11,14 @@ import { IReducer } from "../../store";
 function ShoppingCartButton(props: IProps & IPropsEvents) {
   const { active, total, onClick } = props;
   return (
-    <div className="shopping-cart" onClick={() => onClick()}>
+    <div data-testid="cart-btn" className="shopping-cart" onClick={() => onClick()}>
       <div className={`total ${active ? "active" : ""}`}>
         <FaShoppingCart />
         <span>{Utilities.formatPrice(total)}</span>
       </div>
       {active && (
         <div className="close">
-          <IoCloseSharp /> 
+          <IoCloseSharp />
         </div>
       )}
     </div>
@@ -42,7 +42,7 @@ const mapStateToProps = (state: IReducer, props: { total: number }) => ({
 const mapDispatchToProps = (dispatch: Dispatch): IPropsEvents =>
   bindActionCreators(
     {
-      onClick: setActive
+      onClick: setActive,
     },
     dispatch
   );
